@@ -8,3 +8,6 @@ body{
 #TaskList::-webkit-scrollbar{
     display: none;
 }
+#AllTask::-webkit-scrollbar{
+    display: none;
+}
