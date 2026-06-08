@@ -1,8 +1,15 @@
 const employees = [
   {
     id: 1,
+    firstName: "Rahul",
     email: "employee1@example.com",
     password: "123",
+    taskNumbers: {
+      active: 1,
+      newTask: 1,
+      completed: 1,
+      failed: 1
+    },
     tasks: [
       {
         active: true,
@@ -33,13 +40,31 @@ const employees = [
         taskDescription: "Connect frontend with backend API.",
         taskDate: "2026-05-25",
         category: "Backend"
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: false,
+        taskTitle: "Write Documentation",
+        taskDescription: "Prepare project documentation.",
+        taskDate: "2026-06-01",
+        category: "Documentation"
       }
     ]
   },
+
   {
     id: 2,
+    firstName: "Priya",
     email: "employee2@example.com",
     password: "123",
+    taskNumbers: {
+      active: 2,
+      newTask: 1,
+      completed: 1,
+      failed: 0
+    },
     tasks: [
       {
         active: true,
@@ -52,6 +77,16 @@ const employees = [
         category: "Frontend"
       },
       {
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false,
+        taskTitle: "Testing",
+        taskDescription: "Perform component testing.",
+        taskDate: "2026-06-04",
+        category: "QA"
+      },
+      {
         active: false,
         newTask: false,
         completed: true,
@@ -62,21 +97,29 @@ const employees = [
         category: "Documentation"
       },
       {
-        active: true,
+        active: false,
         newTask: false,
         completed: false,
         failed: false,
-        taskTitle: "Testing",
-        taskDescription: "Perform component testing.",
-        taskDate: "2026-06-04",
-        category: "QA"
+        taskTitle: "Review UI",
+        taskDescription: "Review and improve user interface.",
+        taskDate: "2026-05-30",
+        category: "Design"
       }
     ]
   },
+
   {
     id: 3,
+    firstName: "Amit",
     email: "employee3@example.com",
     password: "123",
+    taskNumbers: {
+      active: 1,
+      newTask: 1,
+      completed: 1,
+      failed: 1
+    },
     tasks: [
       {
         active: true,
@@ -107,13 +150,31 @@ const employees = [
         taskDescription: "Deploy backend on cloud server.",
         taskDate: "2026-05-30",
         category: "DevOps"
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: false,
+        taskTitle: "Database Backup",
+        taskDescription: "Create automated backup scripts.",
+        taskDate: "2026-06-01",
+        category: "Database"
       }
     ]
   },
+
   {
     id: 4,
+    firstName: "Sneha",
     email: "employee4@example.com",
     password: "123",
+    taskNumbers: {
+      active: 2,
+      newTask: 1,
+      completed: 1,
+      failed: 0
+    },
     tasks: [
       {
         active: true,
@@ -144,13 +205,31 @@ const employees = [
         taskDescription: "Review teammate's pull request.",
         taskDate: "2026-05-26",
         category: "Review"
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: false,
+        taskTitle: "Prepare Presentation",
+        taskDescription: "Create sprint review presentation.",
+        taskDate: "2026-06-03",
+        category: "Management"
       }
     ]
   },
+
   {
     id: 5,
+    firstName: "Arjun",
     email: "employee5@example.com",
     password: "123",
+    taskNumbers: {
+      active: 1,
+      newTask: 1,
+      completed: 1,
+      failed: 1
+    },
     tasks: [
       {
         active: true,
@@ -181,16 +260,29 @@ const employees = [
         taskDescription: "Run application performance tests.",
         taskDate: "2026-05-24",
         category: "QA"
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: false,
+        taskTitle: "SEO Optimization",
+        taskDescription: "Improve website search ranking.",
+        taskDate: "2026-06-02",
+        category: "Marketing"
       }
     ]
   }
 ];
-const admin = [{
-  "id": 1,
-  "email": "admin@example.com",
-  "password": "123"
-},
-]
+
+const admin = [
+  {
+    id: 1,
+    firstName: "Admin",
+    email: "admin@example.com",
+    password: "123"
+  }
+];
 
 
 export const setLocalStorage = () => {
