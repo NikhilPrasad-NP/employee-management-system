@@ -1,47 +1,27 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AuthContext } from '../../context/AuthProvider'
 
-function AllTask() {
+const AllTask = () => {
+    const authData = useContext(AuthContext)
     return (
-        <div id='AllTask' className='bg-[#1c1c1c] p-6 mt-5 h-98 overflow-auto rounded'>
-            <div className='bg-red-400 mb-4 flex items-center justify-between rounded py-4 px-5'>
-                <h2>Nikhil</h2>
-                <h3>Make a good design</h3>
-                <h5>Status</h5>
+        <div id='AllTask' className='bg-[#1c1c1c] p-6 mt-5 rounded'>
+            <div className='bg-green-500 mb-4 flex items-center justify-between rounded py-4 px-5 underline text-center'>
+                <h2 className=' w-1/5 '>Employees :</h2>
+                <h3 className=' w-1/5 '>Active Task :</h3>
+                <h5 className=' w-1/5 '>New Task :</h5>
+                <h5 className=' w-1/5 '>Completed Task :</h5>
+                <h5 className=' w-1/5 '>Failed Task :</h5>
             </div>
-            <div className='bg-green-400 mb-4 flex items-center justify-between rounded py-4 px-5'>
-                <h2>Nikhil</h2>
-                <h3>Make a good design</h3>
-                <h5>Status</h5>
-            </div>
-            <div className='bg-blue-400 mb-4 flex items-center justify-between rounded py-4 px-5'>
-                <h2>Nikhil</h2>
-                <h3>Make a good design</h3>
-                <h5>Status</h5>
-            </div>
-            <div className='bg-purple-400 mb-4 flex items-center justify-between rounded py-4 px-5'>
-                <h2>Nikhil</h2>
-                <h3>Make a good design</h3>
-                <h5>Status</h5>
-            </div>
-            <div className='bg-yellow-400 mb-4 flex items-center justify-between rounded py-4 px-5'>
-                <h2>Nikhil</h2>
-                <h3>Make a good design</h3>
-                <h5>Status</h5>
-            </div>
-            <div className='bg-red-400 mb-4 flex items-center justify-between rounded py-4 px-5'>
-                <h2>Nikhil</h2>
-                <h3>Make a good design</h3>
-                <h5>Status</h5>
-            </div>
-            <div className='bg-green-400 mb-4 flex items-center justify-between rounded py-4 px-5'>
-                <h2>Nikhil</h2>
-                <h3>Make a good design</h3>
-                <h5>Status</h5>
-            </div>
-            <div className='bg-cyan-400 mb-4 flex items-center justify-between rounded py-4 px-5'>
-                <h2>Nikhil</h2>
-                <h3>Make a good design</h3>
-                <h5>Status</h5>
+            <div className=''>
+                {authData.employees.map(function (elem) {
+                    return <div className='bg-black mb-4 flex items-center justify-between rounded py-4 px-5 '>
+                        <h2 className='w-1/5 text-center'>{elem.firstName}</h2>
+                        <h3 className='w-1/5 text-center'>{elem.taskNumbers.active}</h3>
+                        <h5 className='w-1/5 text-center'>{elem.taskNumbers.newTask}</h5>
+                        <h5 className='w-1/5 text-center'>{elem.taskNumbers.completed}</h5>
+                        <h5 className='w-1/5 text-center'>{elem.taskNumbers.failed}</h5>
+                    </div>
+                })}
             </div>
         </div>
     )
