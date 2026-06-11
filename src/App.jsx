@@ -45,8 +45,8 @@ useEffect(() => {
   return (
     <>
       {!User && <Login handleLogin={handleLogin} />}
-      {User === 'admin' && <AdminDashboard />}
-      {User === 'employee' && <EmplyoyeeDashboard data={LoggedInUserData} />}
+      {User === 'admin' && <AdminDashboard changeUser={setUser}/>}
+      {User === 'employee' && <EmplyoyeeDashboard data={LoggedInUserData} changeUser={setUser} />}
       {/* <EmplyoyeeDashboard/> */}
       {/* <AdminDashboard/> */}
     </>
