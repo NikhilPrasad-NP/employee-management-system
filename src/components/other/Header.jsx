@@ -1,11 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 function Header(props) {
   const LogOutUser = () => {
     localStorage.setItem('LoggedInUser', '')
     props.changeUser("")
-
-    // window.location.reload()
   }
   return (
     <div className='flex items-end justify-between'>
