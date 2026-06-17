@@ -10,47 +10,48 @@ import { AuthContext } from './context/AuthProvider'
 const App = () => {
   const [User, setUser] = useState(null)
   const [LoggedInUserData, setLoggedInUserData] = useState(null)
-  const [userData,setUserData] = useContext(AuthContext)  
+  const [userData, setUserData] = useContext(AuthContext)
 
+  const currentEmployee =
+    userData?.employees?.find(
+      e => e.email === LoggedInUserData?.email
+    )
 
-useEffect(() => {
-  const LoggedInUser = localStorage.getItem('LoggedInUser')
-  if (LoggedInUser) {
-    const userData= JSON.parse(LoggedInUser)
-    setUser(userData.role)
-    setLoggedInUserData(userData.data)
-  }
-}, [])
+  useEffect(() => {
+    const LoggedInUser = localStorage.getItem('LoggedInUser')
+    if (LoggedInUser) {
+      const userData = JSON.parse(LoggedInUser)
+      setUser(userData.role)
+      setLoggedInUserData(userData.data)
+    }
+  }, [])
 
-// localStorage.clear()
+  // localStorage.clear()
   const handleLogin = (email, password) => {
-    if (email=='admin@me.com' && password=='123') {
-      setUser('admin')
-      localStorage.setItem('LoggedInUser', JSON.stringify({ role: 'admin' }))
+    if (email == 'admin@example.com' && password == '123' && userData) {
+      const admins = userData.admin.find((e) => email == e.email && password == e.password)
+      if (admins) {
+        setUser('admin')
+        setLoggedInUserData(admins)
+        localStorage.setItem('LoggedInUser', JSON.stringify({ role: 'admin', data: admins }))
+      }
     } else if (userData) {
-      const employee=userData.find((e) => email == e.email && password == e.password)
+      const employee = userData.employees.find((e) => email == e.email && password == e.password)
       if (employee) {
         setUser('employee')
         setLoggedInUserData(employee)
-        localStorage.setItem('LoggedInUser', JSON.stringify({ role: 'employee',data:employee }))
+        localStorage.setItem('LoggedInUser', JSON.stringify({ role: 'employee', data: employee }))
       }
     } else {
       alert("Invalid credentials")
     }
   }
-
-  const data = useContext(AuthContext)
-  console.log(data)
-
   return (
     <>
       {!User && <Login handleLogin={handleLogin} />}
-      {User === 'admin' && <AdminDashboard changeUser={setUser}/>}
-      {User === 'employee' && <EmplyoyeeDashboard data={LoggedInUserData} changeUser={setUser} />}
-      {/* <EmplyoyeeDashboard/> */}
-      {/* <AdminDashboard/> */}
+      {User === 'admin' && <AdminDashboard data={LoggedInUserData} changeUser={setUser} />}
+      {User === 'employee' && currentEmployee && (<EmplyoyeeDashboard data={currentEmployee} changeUser={setUser} />)}
     </>
-
   )
 }
 

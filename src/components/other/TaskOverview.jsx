@@ -9,7 +9,7 @@ function TaskOverview({data}) {
       </div>
       <div className='bg-green-700 w-[45%] rounded-2xl py-6 px-9'>
         <h2 className='text-3xl font-semibold'>{data.taskNumbers.active}</h2>
-        <h3 className='text-3xl font-semibold'>Accepted task</h3>
+        <h3 className='text-3xl font-semibold'>Active task</h3>
       </div>
       <div className='bg-sky-700 w-[45%] rounded-2xl py-6 px-9'>
         <h2 className='text-3xl font-semibold'>{data.taskNumbers.completed}</h2>
