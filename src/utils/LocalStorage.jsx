@@ -12,8 +12,9 @@ const employees = [
     },
     tasks: [
       {
+        id: 101,
         active: true,
-        newTask: true,
+        newTask: false,
         completed: false,
         failed: false,
         taskTitle: "Design Dashboard",
@@ -22,6 +23,7 @@ const employees = [
         category: "Design"
       },
       {
+        id: 102,
         active: false,
         newTask: false,
         completed: true,
@@ -32,6 +34,7 @@ const employees = [
         category: "Development"
       },
       {
+        id: 103,
         active: false,
         newTask: false,
         completed: false,
@@ -42,8 +45,9 @@ const employees = [
         category: "Backend"
       },
       {
+        id: 104,
         active: false,
-        newTask: false,
+        newTask: true,
         completed: false,
         failed: false,
         taskTitle: "Write Documentation",
@@ -67,8 +71,9 @@ const employees = [
     },
     tasks: [
       {
+        id: 201,
         active: true,
-        newTask: true,
+        newTask: false,
         completed: false,
         failed: false,
         taskTitle: "Create Login Page",
@@ -77,6 +82,7 @@ const employees = [
         category: "Frontend"
       },
       {
+        id: 202,
         active: true,
         newTask: false,
         completed: false,
@@ -87,6 +93,7 @@ const employees = [
         category: "QA"
       },
       {
+        id: 203,
         active: false,
         newTask: false,
         completed: true,
@@ -97,8 +104,9 @@ const employees = [
         category: "Documentation"
       },
       {
+        id: 204,
         active: false,
-        newTask: false,
+        newTask: true,
         completed: false,
         failed: false,
         taskTitle: "Review UI",
@@ -122,8 +130,9 @@ const employees = [
     },
     tasks: [
       {
+        id: 301,
         active: true,
-        newTask: true,
+        newTask: false,
         completed: false,
         failed: false,
         taskTitle: "Setup Database",
@@ -132,6 +141,7 @@ const employees = [
         category: "Database"
       },
       {
+        id: 302,
         active: false,
         newTask: false,
         completed: true,
@@ -142,6 +152,7 @@ const employees = [
         category: "Security"
       },
       {
+        id: 303,
         active: false,
         newTask: false,
         completed: false,
@@ -152,8 +163,9 @@ const employees = [
         category: "DevOps"
       },
       {
+        id: 304,
         active: false,
-        newTask: false,
+        newTask: true,
         completed: false,
         failed: false,
         taskTitle: "Database Backup",
@@ -177,8 +189,9 @@ const employees = [
     },
     tasks: [
       {
+        id: 401,
         active: true,
-        newTask: true,
+        newTask: false,
         completed: false,
         failed: false,
         taskTitle: "Build Profile Page",
@@ -187,6 +200,7 @@ const employees = [
         category: "Frontend"
       },
       {
+        id: 402,
         active: true,
         newTask: false,
         completed: false,
@@ -197,6 +211,7 @@ const employees = [
         category: "Database"
       },
       {
+        id: 403,
         active: false,
         newTask: false,
         completed: true,
@@ -207,8 +222,9 @@ const employees = [
         category: "Review"
       },
       {
+        id: 404,
         active: false,
-        newTask: false,
+        newTask: true,
         completed: false,
         failed: false,
         taskTitle: "Prepare Presentation",
@@ -232,8 +248,9 @@ const employees = [
     },
     tasks: [
       {
+        id: 501,
         active: true,
-        newTask: true,
+        newTask: false,
         completed: false,
         failed: false,
         taskTitle: "Create Landing Page",
@@ -242,6 +259,7 @@ const employees = [
         category: "Frontend"
       },
       {
+        id: 502,
         active: false,
         newTask: false,
         completed: true,
@@ -252,6 +270,7 @@ const employees = [
         category: "Maintenance"
       },
       {
+        id: 503,
         active: false,
         newTask: false,
         completed: false,
@@ -262,8 +281,9 @@ const employees = [
         category: "QA"
       },
       {
+        id: 504,
         active: false,
-        newTask: false,
+        newTask: true,
         completed: false,
         failed: false,
         taskTitle: "SEO Optimization",
