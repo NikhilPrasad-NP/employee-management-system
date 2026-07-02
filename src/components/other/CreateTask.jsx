@@ -48,33 +48,40 @@ function CreateTask() {
 
     }
     return (
-        <div className='bg-[#1c1c1c] rounded p-5 mt-8'>
+        <div className='bg-[#0D1117] rounded-xl border border-[#30363D] shadow-lg p-8 mt-8'>
+            <div className="mb-6 flex justify-center">
+                <h2 className="text-2xl font-semibold text-white">
+                    📝 Create New Task
+                </h2>
+            </div>
             <form onSubmit={(e) => {
                 submitHandler(e)
             }} className='flex flex-wrap w-full items-start justify-between'>
+
                 <div className='w-1/2'>
+
                     <div>
-                        <h3 className=' text-sm text-gray-300 mb-0.5'>Task Title</h3>
-                        <input value={taskTitle} onChange={(e) => { setTaskTitle(e.target.value) }} className='text-sm py-1 px-2 w-3/4 rounded outline-none bg-transparent border-1 border-gray-400 mb-4' type="text" placeholder='Task name' />
+                        <h3 className=' text-sm text-[#F0F6FC] font-medium mb-0.5'>Task Title</h3>
+                        <input value={taskTitle} onChange={(e) => { setTaskTitle(e.target.value) }} className='text-sm py-1 px-2 w-3/4 rounded-md outline-none bg-[#0D1117] border border-[#30363D] mb-4 focus:border-[#1F6FEB] focus:ring-1 focus:ring-[#1F6FEB] placeholder:text-[#8B949E]' type="text" placeholder='Task name' />
                     </div>
                     <div>
-                        <h3 className='text-sm mb-0.5 text-gray-300'>Date</h3>
-                        <input value={taskDate} onChange={(e) => { setTaskDate(e.target.value) }} className='text-sm py-1 px-2 w-3/4 rounded outline-none bg-transparent border-1 border-gray-400 mb-4' type="date" name="" id="" />
+                        <h3 className='text-sm text-[#F0F6FC] font-medium mb-0.5'>Date</h3>
+                        <input value={taskDate} onChange={(e) => { setTaskDate(e.target.value) }} className='text-sm py-1 px-2 w-3/4 rounded-md outline-none bg-[#0D1117] border border-[#30363D] mb-4 focus:border-[#1F6FEB] focus:ring-1 focus:ring-[#1F6FEB]' type="date" name="" id="" />
                     </div>
                     <div>
-                        <h3 className='text-sm mb-0.5 text-gray-300'>Asign to</h3>
-                        <input value={assignTO} onChange={(e) => { setAssignTO(e.target.value) }} className='text-sm py-1 px-2 w-3/4 rounded outline-none bg-transparent border-1 border-gray-400 mb-4' type="text" placeholder='Employee name' />
+                        <h3 className='text-sm text-[#F0F6FC] font-medium mb-0.5'>Asign to</h3>
+                        <input value={assignTO} onChange={(e) => { setAssignTO(e.target.value) }} className='text-sm py-1 px-2 w-3/4 rounded-md outline-none bg-[#0D1117] border border-[#30363D] mb-4 focus:border-[#1F6FEB] focus:ring-1 focus:ring-[#1F6FEB] placeholder:text-[#8B949E]' type="text" placeholder='Employee name' />
                     </div>
                     <div>
-                        <h3 className='text-sm mb-0.5 text-gray-300'>Category</h3>
-                        <input value={category} onChange={(e) => { setCategory(e.target.value) }} className='text-sm py-1 px-2 w-3/4 rounded outline-none bg-transparent border-1 border-gray-400 mb-4' type="text" placeholder='design, dev, etc' />
+                        <h3 className='text-sm text-[#F0F6FC] font-medium mb-0.5'>Category</h3>
+                        <input value={category} onChange={(e) => { setCategory(e.target.value) }} className='text-sm py-1 px-2 w-3/4 rounded-md outline-none bg-[#0D1117] border border-[#30363D] mb-4 focus:border-[#1F6FEB] focus:ring-1 focus:ring-[#1F6FEB] placeholder:text-[#8B949E]' type="text" placeholder='design, dev, etc' />
                     </div>
                 </div>
+
                 <div className='w-2/5 flex flex-col items-start'>
-                    <h3 className='text-sm text-gray-300 mb-0.5'>Description</h3>
-                    <textarea value={taskDescription} onChange={(e) => { setTaskDescription(e.target.value) }} className='py-2 px-4 w-full
-                        h-45 text-sm border-1 rounded outline-none border-gray-400 bg-transparent' placeholder="Details..." type="text" name="" id="" />
-                    <button className='bg-green-500 rounded h-12 font-medium text-lg hover:bg-green-600 w-full mt-2'>create</button>
+                    <h3 className='text-sm text-[#F0F6FC] font-medium mb-0.5'>Description</h3>
+                    <textarea value={taskDescription} onChange={(e) => { setTaskDescription(e.target.value) }} className='text-sm py-2 px-4 w-3/4 rounded-md outline-none bg-[#0D1117] border border-[#30363D] mb-4 focus:border-[#1F6FEB] focus:ring-1 focus:ring-[#1F6FEB] h-45 w-full placeholder:text-[#8B949E]' placeholder="Details....." type="text" name="" id="" />
+                    <button className='bg-[#238636] hover:bg-[#2EA043] rounded h-12 font-medium text-lg hover:bg-green-600 w-full mt-2'>create</button>
                 </div>
 
             </form>
