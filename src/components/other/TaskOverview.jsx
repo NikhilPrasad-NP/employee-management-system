@@ -25,11 +25,11 @@ function TaskOverview({ data }) {
 ]
   return (
     <div className='flex gap-5 screen mt-10 '>
-      {overviewCards.map((oc)=>{
+      {overviewCards.map((oc,idx)=>{
         return (
-        <div className='bg-[#161B22]  border border-[#30363D] shadow-lg transition-all duration-300 hover:border-[#1F6FEB] hover:-translate-y-1 flex-1 rounded-xl p-6'>
-          <h2 className='text-5xl font-bold'>{oc.count}</h2>
-          <h3 className='text-2xl text-[#8B949E] font-medium'>{oc.title}</h3>
+        <div key={idx} className='bg-[#161B22]  border border-[#30363D] shadow-lg transition-all duration-300 hover:border-[#1F6FEB]  flex-1 rounded-xl p-6'>
+          <h2 className='text-4xl font-bold'> {oc.count}</h2>
+          <h3 className='text-xl text-[#8B949E] font-medium'>{oc.title}</h3>
           </div>
       )
       })}

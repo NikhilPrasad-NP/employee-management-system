@@ -36,7 +36,7 @@ const AcceptTask = ({ data }) => {
             "employees",
             JSON.stringify(employeeData.employees)
         )
-    }
+    }   
     const failTask = () => {
         const employeeData = userData
         employeeData.employees.forEach((elem) => {
@@ -77,8 +77,8 @@ const AcceptTask = ({ data }) => {
             <h2 className='mt-6 text-2xl font-bold text-white'>{data.taskTitle}</h2>
             <p className='mt-4 text-xl leading-6 text-[#8B949E]'>{data.taskDescription}</p>
             <div className='flex justify-center items-center gap-5 mt-8'>
-                <button onClick={completeTask} className='bg-[#238636] hover:bg-[#2EA043] transition-all duration-200 rounded-lg py-1 px-2  font-medium'>Mark As Completed</button>
-                <button onClick={failTask} className='bg-[#862323] hover:bg-[#cf1010] transition-all duration-200 rounded-lg py-1 px-2  font-medium'>Mark As Failed</button>
+                <button onClick={completeTask} className='bg-[#238636] hover:bg-[#2EA043] transition-all duration-200 rounded-xl py-2 px-3  font-medium'>Mark As Completed</button>
+                <button onClick={failTask} className='bg-[#862323] hover:bg-[#cf1010] transition-all duration-200 rounded-xl py-2 px-3  font-medium'>Mark As Failed</button>
             </div>
         </div>
     )

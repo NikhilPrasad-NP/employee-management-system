@@ -45,7 +45,7 @@ const NewTask = ({ data }) => {
             <h2 className='mt-6 text-2xl font-bold text-white'>{data.taskTitle}</h2>
             <p className='mt-4 text-xl leading-6 text-[#8B949E]'>{data.taskDescription}</p>
             <div className='mt-8 flex justify-center'>
-                <button onClick={acceptTask} className='bg-[#238636] hover:bg-[#2EA043] transition-all duration-200 rounded-lg py-2.5 px-5 font-medium'>Accept Task</button>
+                <button onClick={acceptTask} className='bg-[#238636] hover:bg-[#2EA043] transition-all duration-200 rounded-xl py-2.5 px-5 font-medium'>Accept Task</button>
             </div>
         </div>
     )
