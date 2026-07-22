@@ -13,19 +13,18 @@ function Header(props) {
   return (
     <div className='flex items-center justify-between mb-10'>
       <div>
-        <p className="text-lg text-slate-400 font-medium">
+        <p className="text-base md:text-lg text-slate-400 font-medium">
           Welcome Back,
         </p>
 
-        <h1 className="text-5xl font-bold text-white mt-1 ">
+        <h1 className="text-3xl md:text-5xl font-bold text-white mt-1 ">
           {Username} 👋
         </h1>
       </div>
-      <div className="flex items-center gap-5">
-
-        <div className='w-12 h-12 rounded-full bg-[#238636] flex items-center justify-center text-xl font-bold text-white cursor-pointer transition-all duration-300 hover:scale-105 ' >{Username.charAt(0)}</div>
-
-        <button onClick={LogOutUser} className='bg-[#DA3633] hover:bg-red-700 hover:scale-105 rounded-xl py-2.5 px-5 text-lg font-semibold transition-all duration-300'>Log out</button>
+      <div className="flex items-center gap-3 md:gap-5">
+        <button onClick={LogOutUser} className='bg-[#DA3633] hover:bg-red-700 hover:scale-105 rounded-xl py-2 px-4 text-base md:py-2.5 md:px-5 md:text-lg font-semibold transition-all duration-300'>Log out</button>
+        
+        <div className='w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#238636] flex items-center justify-center text-xl font-bold text-white cursor-pointer transition-all duration-300 hover:scale-105 ' >{Username.charAt(0)}</div>
       </div>
     </div>
   )

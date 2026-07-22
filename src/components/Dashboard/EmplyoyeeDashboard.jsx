@@ -14,34 +14,34 @@ function EmplyoyeeDashboard(props) {
     if (!confirmDelete) return
     employeeData.employees.forEach((elem) => {
       if (loggedInUser.data.email === elem.email) {
-        elem.tasks=elem.tasks.filter((task) => {
+        elem.tasks = elem.tasks.filter((task) => {
           return task.newTask || task.active
         })
       }
     })
     setUserData({ ...employeeData })
     const updatedEmployee = employeeData.employees.find(
-            (e) => e.email === loggedInUser.data.email
-        )
-        localStorage.setItem(
-            "LoggedInUser",
-            JSON.stringify({
-                role: "employee",
-                data: updatedEmployee
-            })
-        )
-        localStorage.setItem(
-            "employees",
-            JSON.stringify(employeeData.employees)
-        )
+      (e) => e.email === loggedInUser.data.email
+    )
+    localStorage.setItem(
+      "LoggedInUser",
+      JSON.stringify({
+        role: "employee",
+        data: updatedEmployee
+      })
+    )
+    localStorage.setItem(
+      "employees",
+      JSON.stringify(employeeData.employees)
+    )
   }
   return (
-    <div className='p-10 bg-[#000000] h-screen'>
+    <div className='p-4 md:p-10 bg-[#000000] min-h-screen'>
       <Header changeUser={props.changeUser} data={props.data} />
       <TaskOverview data={props.data} />
-      <div className="mt-12 flex justify-between items-center">
+      <div className="mt-12 flex flex-col gap-4 md:flex-row md:justify-between md:items-center">
         <div>
-          <h2 className="text-3xl font-semibold text-white">
+          <h2 className="text-2xl md:text-3xl font-semibold text-white">
             My Tasks :
           </h2>
         </div>
