@@ -25,7 +25,7 @@ function TaskList({ data }) {
     )
   }
   return (
-    <div id='TaskList' className=' h-[55%] overflow-x-auto w-full items-stretch flex justify-start gap-6 py-8 scroll-smooth '>
+    <div id='TaskList' className='h-[55%] overflow-x-auto w-full flex items-stretch justify-start gap-4 md:gap-6 py-8 scroll-smooth snap-x snap-mandatory'>
 
       {data.tasks.map((elem) => {
         if (elem.active) {

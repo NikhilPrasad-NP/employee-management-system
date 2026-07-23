@@ -39,13 +39,13 @@ function EmplyoyeeDashboard(props) {
     <div className='p-4 md:p-10 bg-[#000000] min-h-screen'>
       <Header changeUser={props.changeUser} data={props.data} />
       <TaskOverview data={props.data} />
-      <div className="mt-12 flex flex-col gap-4 md:flex-row md:justify-between md:items-center">
+      <div className="mt-12 flex justify-between items-center gap-3">
         <div>
-          <h2 className="text-2xl md:text-3xl font-semibold text-white">
+          <h2 className="text-xl md:text-3xl font-semibold text-white">
             My Tasks :
           </h2>
         </div>
-        <button onClick={Clear} className='bg-[#DA3633] hover:bg-red-700 text-white px-5 py-2.5 rounded-lg font-medium transition-all duration-200'>Clear</button>
+        <button onClick={Clear} className='bg-[#DA3633] hover:bg-red-700 text-white px-3 md:px-5 py-2 md:py-2.5 rounded-lg text-sm md:text-base transition-all duration-200'>Clear</button>
       </div>
       <TaskList data={props.data} />
     </div>
