@@ -38,7 +38,7 @@ const login = ({ handleLogin }) => {
 
                     <div className="space-y-4">
 
-                        <div className="bg-[#1c1c1c] border border-gray-700 rounded-lg p-3">
+                        <div className="bg-[#161616e1] border border-gray-700 rounded-lg p-3">
                             <p className="font-semibold text-emerald-400">👨‍💼 Admin</p>
                             <p className="text-sm text-gray-300">Email: admin@example.com</p>
                             <p className="text-sm text-gray-300">Password: 123</p>
@@ -52,7 +52,7 @@ const login = ({ handleLogin }) => {
                             Fill Admin Credentials
                         </button>
 
-                        <div className="bg-[#1c1c1c] border border-gray-700 rounded-lg p-3">
+                        <div className="bg-[#161616e1] border border-gray-700 rounded-lg p-3">
                             <p className="font-semibold text-emerald-400">👨‍💻 Employee</p>
                             <p className="text-sm text-gray-300">Email: employee1@example.com</p>
                             <p className="text-sm text-gray-300">Password: 123</p>
